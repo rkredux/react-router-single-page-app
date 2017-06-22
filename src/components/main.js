@@ -7,6 +7,7 @@ import Contact from "./contact.js";
 
 
 class Main extends React.Component{
+	
 	render(){
 		return (
 		<Switch>
