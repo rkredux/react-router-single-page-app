@@ -3,7 +3,7 @@
 const SampleSpeakers = {
 
   speaker1: {
-    name: 'Pacific Halibut',
+    name: 'Halle Berry',
     image: "./conference-images/conference-dog1.jpg", 
     desc: 'Everyones favorite white fish. We will cut it to the size you need and ship it.', 
     breed: "bulldog"
