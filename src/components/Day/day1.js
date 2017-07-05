@@ -1,6 +1,7 @@
 import React from "react";
 import ConferenceAgenda from "../ConferenceAgenda.js"; 
 import Session from "../Session.js"; 
+import SampleSpeakers from "../SampleSpeakers.js"; 
 
 
 
