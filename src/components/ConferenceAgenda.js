@@ -18,7 +18,7 @@ const ConferenceAgenda = {
 			session2: {
 				time: "11:00-12:00", 
 				speaker: ["speaker2", "speaker4"], 
-				name: "Companionship", 
+				name: "Two At A Time", 
 				description: "Come get the latest insigts into the food we like hoomans"
 			},
 			 
@@ -32,7 +32,7 @@ const ConferenceAgenda = {
 	        session4: {
 				time: "15:00-16:30", 
 				speaker: ["speaker5", "speaker3"], 
-				name: "Leashes & Treats", 
+				name: "Walk Duration", 
 	     		description: "Come get the latest insigts into the food we like hoomans"
 	        }
 
@@ -51,7 +51,7 @@ const ConferenceAgenda = {
 			session1: {
 				time: "9:30-10:30", 
 				speaker: ["speaker1", "speaker6"], 
-				name: "Food", 
+				name: "Food Serving Etiquettes", 
 				description: "Come get the latest insigts into the food we like hoomans"
 			}, 
 
@@ -72,7 +72,7 @@ const ConferenceAgenda = {
 			   session4: {
 				time: "15:00-16:30", 
 				speaker: ["speaker5", "speaker3"], 
-				name: "Leashes & Treats", 
+				name: "Helping Us With Our Business", 
 	     		description: "Come get the latest insigts into the food we like hoomans"
 	        }
 		}
@@ -112,7 +112,7 @@ const ConferenceAgenda = {
 			   session4: {
 				time: "15:00-16:30", 
 				speaker: ["speaker5", "speaker3"], 
-				name: "Leashes & Treats", 
+				name: "Thank You For Parenting", 
 	     		description: "Come get the latest insigts into the food we like hoomans"
 	        }
 

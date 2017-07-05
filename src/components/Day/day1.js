@@ -8,7 +8,7 @@ const Day1 = () => {
 	return (
 
 		  <div className="agenda-container">
-		    {Object.keys(ConferenceAgenda.day1.agenda).map((key) => <Session time={ConferenceAgenda.day1.agenda[key].time} name={ConferenceAgenda.day1.agenda[key].name} speaker={ConferenceAgenda.day1.agenda[key].speaker[0]} index={key}/>)}
+		    {Object.keys(ConferenceAgenda.day1.agenda).map((key) => <Session key={key} time={ConferenceAgenda.day1.agenda[key].time} name={ConferenceAgenda.day1.agenda[key].name} speaker={ConferenceAgenda.day1.agenda[key].speaker[0]} index={key}/>)}
 		  </div>
 	
 		); 

@@ -12,7 +12,7 @@ class ScheduleViewer extends React.Component{
 	render(){
 		return (
 		<Switch>
-			<Route exact path="/schedule/" component={Day1}></Route>
+			<Route exact path="/schedule/day1" component={Day1}></Route>
 			<Route exact path="/schedule/day2" component={Day2}></Route>
 			<Route exact path="/schedule/day3" component={Day3}></Route>
 		</Switch>	
