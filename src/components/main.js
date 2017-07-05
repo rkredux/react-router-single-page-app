@@ -12,17 +12,25 @@ import Venue from "./venue.js";
 
 
 
+
+
 class Main extends React.Component{
 
 	render(){
 		return (
-		<Switch>
-			<Route exact path="/" component={Home}></Route>
-			<Route path="/speakers" component={Speakers}></Route>
-			<Route path="/schedule/" component={Schedule}></Route>
-			<Route path="/pricing" component={Pricing}></Route>
-			<Route path="/venue" component={Venue}></Route>
-		</Switch>	
+	    	
+			<Switch>
+
+
+				<Route exact path="/" component={Home}></Route>
+				<Route path="/speakers" component={Speakers}></Route>
+				<Route path="/schedule/" component={Schedule}></Route>
+				<Route path="/pricing" component={Pricing}></Route>
+				<Route path="/venue" component={Venue}></Route>
+
+	
+
+			</Switch>	
 			
          ); 
 	}
