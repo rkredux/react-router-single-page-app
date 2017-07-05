@@ -11,33 +11,28 @@ body{
 	font-family: sans-serif;
 	margin: 0;
 	background: #f2af29;
-	/*border: 2px dotted black;*/
-	/*height: 100vh;*/
 }
 
 div.wrapper{
-	/*border: 2px solid red;*/
 	padding-top: 10px;
 	width: 100%;
 }
-
-
 
 
 /*navigation styling*/
 
 nav.flex-nav{
 	display: flex;
-	/*align-items: flex-start; */
 	justify-content: space-between;
-	/*border: 2px solid purple;*/
-	padding: 10px 10px;
+	padding: 20px 10px;
+	align-items: center; 
 } 
 
 
 nav.flex-nav a{
 	text-decoration: none; 
 }
+
 
 
 div.logo{
@@ -47,14 +42,12 @@ div.logo{
 	font-size: 1rem;
 	letter-spacing: 1px;
 	padding: 15px 10px 15px 10px; 
-	margin: 20px 0 0 30px;
+	margin: 20px 0 0px 30px;
 }
 
 
 div.logo span{
 	margin-left: 5px; 
-	/*color: #A9A9A9;*/
-	/*border: 2px solid;*/
 }
 
 
@@ -62,14 +55,12 @@ ul.navbar{
 	margin: 0 20px 0 0;
 	display: flex;
 	justify-content: center; 
-	/*border: 2px solid black;*/
 	list-style: none; 
 	padding-left: 0; 
 }
 
 
 li{
-	/*border: 2px solid white;*/
 	padding: 15px 10px 15px 10px; 
 }
 
@@ -80,7 +71,6 @@ ul.navbar li a{
 	font-size: .7rem;
 	letter-spacing: 1px;
 	padding: 10px 10px;
-	/*border: 2px solid black;*/
 	border-radius: 5px; 
 	/*border: 2px solid;*/
 }
@@ -91,30 +81,16 @@ ul.navbar li a:hover{
 	color: black;
 }
 
-
-div.menu{
-	/*padding: 50px;*/
-	display: none;
-}
-
-
-button.open{
-  /*border: 2px solid white;  */
-  background: rgba(255,255,255,0);
-  /*display: hidden; */
-  margin: 0;
-  padding: 5px;
-  cursor: pointer; 
-  outline: 0;
-  font-size: 2rem;
-  color: white;  /*position: absolute;*/
+ul.navbar li a:active{
+	background: white; 
+	color: black;
 }
 
 
 @media only all and (max-width: 950px){
 
 	ul.navbar{
-		margin: 0px 20px 0 0;
+		margin: 0px 0px 0 0;
 		/*border: 2px solid white;*/
 	}
 
@@ -144,18 +120,10 @@ button.open{
 
 
 	ul.navbar{
-		margin: 0; 
+		margin-top: 20px; 
 		justify-content: center; 
 		font-size: 2vw;
 	}
-
-
-	div.logo{
-		display: inline;
-		margin-bottom: 20px;
-
-	}
-
 
 }
 
@@ -169,6 +137,7 @@ button.open{
 	letter-spacing: .5px;
 	padding: 5px 5px;
 	border-radius: 5px; 
+
   }
 
 }
@@ -262,7 +231,6 @@ div.conference-detail h1{
 }
 
 div.conference-detail p{
-	/*border: 2px dotted goldenrod;*/
 	font-size: 6.5vw;
 }
 
@@ -271,7 +239,6 @@ div.conference-detail p{
 
 
 
-/*about us page component styling ends*/
 
 
 
@@ -279,9 +246,12 @@ div.conference-detail p{
 /*schedule component styling begins*/
 
 .schedule{
-	/*border: 2px solid white; */
+	/*border: 2px solid; */
 	margin-top: 100px;
+}
 
+.schedule > *{
+	margin: 0px;
 }
 
 ul.agenda-nav{
@@ -292,17 +262,9 @@ ul.agenda-nav{
 	list-style: none;
 	padding: 0 0 0 0;
 	position: relative;
+	/*border: 2px solid;*/
 }
 
-/*ul.agenda-nav::before{
-	content: "";
-	position: absolute;
-	top: 0; right: 0; bottom: 0; left: 0;
-	z-index: 0; 
-	background: #58a;
-	transform: skew(-45deg);
-}
-*/
 
 li.day{
 	flex-grow: 1;
@@ -312,13 +274,7 @@ li.day{
 	padding: 10px;
 	position: relative;
 }
-/*
-li.day::before{
-	content: "";
-	position: absolute;
-	top: 0; right:0; bottom:0; left:0;
-	z-index: 0; 
-}*/
+
 
 
 li.day:hover::after{
@@ -368,34 +324,66 @@ li.day a{
 
 ul.session-container{
 	/*color: black;*/
+	margin: 10px 0;
 	background: white; 
 	color: #808080; 
 	list-style: none;
 	display: flex;
-	justify-content: space-between; 
-	/*border: 2px dotted white;*/
+	justify-content: flex-start; 
+	align-items: center; 
+	/*border: 2px dotted black;*/
+	flex-wrap: wrap;
+	padding-left: 0px;
 }
 
 
 li.session{
 	/*border: 2px dotted black;*/
+	flex-grow: 1;  
+	/*border-bottom: .5px solid;*/
 }
 
 li.time{
 	font-size: 1rem;
-	align-self:;
-
+	text-align: left; 
 }
 
 li.name{
 	font-size: 1rem;
 	font-weight: 100;
-	margin-left: 0;
+	padding: 0 10px;
 }
 
 li.speaker-name{
 	font-size: 1rem;
+	text-align: right; 
+	/*border: 2px solid;*/
+	padding-right: 10px;
 }
+
+
+
+@media only all and (max-width: 850px){
+	
+ul.session-container{
+	flex-direction: column; 
+}
+
+li.session li{
+	text-align: center; 
+}
+
+li.name{
+	text-align: center;
+}
+
+li.speaker-name{
+	padding-right: 0;
+
+}
+
+}
+
 
 
 
