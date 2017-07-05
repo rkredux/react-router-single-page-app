@@ -12,13 +12,15 @@ body{
 	margin: 0;
 	background: #f2af29;
 	/*border: 2px dotted black;*/
-	height: 100vh;
+	/*height: 100vh;*/
 }
 
 div.wrapper{
 	/*border: 2px solid red;*/
-	padding-top: 20px;
+	padding-top: 10px;
+	width: 100%;
 }
+
 
 
 
@@ -33,6 +35,11 @@ nav.flex-nav{
 } 
 
 
+nav.flex-nav a{
+	text-decoration: none; 
+}
+
+
 div.logo{
 	display: inline;
     border: 4px solid white;
@@ -40,7 +47,7 @@ div.logo{
 	font-size: 1rem;
 	letter-spacing: 1px;
 	padding: 15px 10px 15px 10px; 
-	margin-left: 30px; 
+	margin: 20px 0 0 30px;
 }
 
 
@@ -54,7 +61,7 @@ div.logo span{
 ul.navbar{
 	margin: 0 20px 0 0;
 	display: flex;
-	justify-content: space-around; 
+	justify-content: center; 
 	/*border: 2px solid black;*/
 	list-style: none; 
 	padding-left: 0; 
@@ -75,6 +82,7 @@ ul.navbar li a{
 	padding: 10px 10px;
 	/*border: 2px solid black;*/
 	border-radius: 5px; 
+	/*border: 2px solid;*/
 }
 
 
@@ -83,21 +91,96 @@ ul.navbar li a:hover{
 	color: black;
 }
 
+
+div.menu{
+	/*padding: 50px;*/
+	display: none;
+}
+
+
+button.open{
+  /*border: 2px solid white;  */
+  background: rgba(255,255,255,0);
+  /*display: hidden; */
+  margin: 0;
+  padding: 5px;
+  cursor: pointer; 
+  outline: 0;
+  font-size: 2rem;
+  color: white;  /*position: absolute;*/
+}
+
+
+@media only all and (max-width: 950px){
+
+	ul.navbar{
+		margin: 0px 20px 0 0;
+		/*border: 2px solid white;*/
+	}
+
+
+	li{
+		padding: 15px 2px 15px 2px; 
+	}
+
+
+	ul.navbar li a{
+		padding: 10px 10px;
+		/*border: 2px solid;*/
+	}
+
+}
+
+
+
+@media only all and (max-width: 850px){
+	
+	nav.flex-nav{
+		display: flex;
+		flex-direction: column; 
+		align-items: center; 
+		padding: 10px 10px;
+	} 
+
+
+	ul.navbar{
+		margin: 0; 
+		justify-content: center; 
+		font-size: 2vw;
+	}
+
+
+	div.logo{
+		display: inline;
+		margin-bottom: 20px;
+
+	}
+
+
+}
+
+
+@media only all and (max-width: 550px){
+
+	ul.navbar li a{
+	color: white; 
+	text-decoration: none; 
+	font-size: 3.5vw;
+	letter-spacing: .5px;
+	padding: 5px 5px;
+	border-radius: 5px; 
+  }
+
+}
+
+
+
 /*navigation styling ends*/
 
 
 
 
-div.home-content{
-	background-image: url(https://source.unsplash.com/XXzBM3spynk/); 
-	background-size: cover;
-	margin-top: 5px;
-	height: 600px;
-	/*border: 2px solid;*/
-	overflow: hidden;
-}
-
-
+/*common styling for all components */
 div.main-content{
 	margin-top: 100px;
 	/*border: 2px solid purple;*/
@@ -109,15 +192,91 @@ div.inner-wrapper{
 	margin: auto;
 	width: 70%;
 	max-width: 800px;
-	/*height: 500px;*/
 	margin-top: 20px;
 }
 
 
 
 
-/*schedule component styling begins*/
+/*about us page component styling begins*/
+div.home-content{
+	/*width: 100%; */
+	background-image: url(https://source.unsplash.com/XXzBM3spynk/); 
+	background-size: cover;
+	margin-top: 5px;
+	overflow: hidden;
+	/*border: 2px solid white;*/
+}
 
+div.conference-detail{
+	border-left: 5px solid #f2af29;
+	/*margin-top: 250px;*/
+	/*height: 40%;*/
+	width: 70%;
+	margin: 300px auto; 
+	padding-left: 20px;
+	/*border: 2px solid white;*/
+}
+
+div.conference-detail h1{
+	/*border: 2px dotted white;*/
+	color: white;
+	font-size: 250%;
+	margin-bottom: 40px;
+}
+
+div.conference-detail p{
+	/*border: 2px dotted goldenrod;*/
+	width: 22ch; 
+	/*border: 2px dotted white;*/
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	color: white;
+	font-weight: lighter;
+	font-size: 1.5rem;
+	margin: 0;
+	border-right: 2px solid white;
+	animation: 
+	      typing 2s steps(22, end) infinite,
+	      /*reversing 2s steps(23, end) infinite,*/
+	      blink-caret .75s step-end infinite;  
+	      /*reversing 2s step-end infinite; */
+	} 
+
+@keyframes typing{
+    from {width: 0}
+}
+
+
+@keyframes blink-caret{
+	from, to {border-color: transparent}
+	50% {border-color: white;}
+}
+	
+
+@media only all and (max-width: 600px){
+	
+div.conference-detail h1{	
+	font-size: 10vw;
+}
+
+div.conference-detail p{
+	/*border: 2px dotted goldenrod;*/
+	font-size: 6.5vw;
+}
+
+}
+
+
+
+
+/*about us page component styling ends*/
+
+
+
+
+/*schedule component styling begins*/
 
 .schedule{
 	/*border: 2px solid white; */
@@ -125,29 +284,77 @@ div.inner-wrapper{
 
 }
 
-
 ul.agenda-nav{
-	/*color: black;*/
-	max-width: 400px;
-	margin: 0 20px 0 0;
+	max-width: 500px;
 	display: flex;
-	justify-content:flex-start;  
-	/*border: 2px solid black;*/
+	justify-content: center; 
 	background: white; 
-	list-style: none; 
-	padding-left: 0; 
-
-	/*border-radius: 5px;*/
-	/*font-size: 1.5rem;*/
+	list-style: none;
+	padding: 0 0 0 0;
+	position: relative;
 }
 
+/*ul.agenda-nav::before{
+	content: "";
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	z-index: 0; 
+	background: #58a;
+	transform: skew(-45deg);
+}
+*/
 
 li.day{
+	flex-grow: 1;
 	/*border: 2px dotted black;*/
-	padding: 15px 10px 15px 10px;
-
-	/*font-size: 1.5rem;*/
+	display: flex;
+	justify-content: center; 
+	padding: 10px;
+	position: relative;
 }
+/*
+li.day::before{
+	content: "";
+	position: absolute;
+	top: 0; right:0; bottom:0; left:0;
+	z-index: 0; 
+}*/
+
+
+li.day:hover::after{
+  content: ""; 
+  position: absolute;
+  border-top: 15px solid #808080; 
+  border-right: 15px solid transparent; 
+  border-bottom: 15px solid transparent; 
+  border-left: 15px solid transparent; 
+  width: 0; 
+  height: 0;
+  margin-left: -15px; 
+  left: 50%; 
+  top: 100%;
+}
+
+
+li.day::before:hover{
+	border: 0.8em solid transparent;
+	position: absolute;
+	left: 45%;
+	bottom: -20px;
+	border-top: 10px solid #444;
+}
+
+
+li.day:hover{
+    background:#808080;
+}
+
+
+li.day:hover a{
+	color: white;
+}
+
+
 
 li.day a{
 	color: #808080;
@@ -155,12 +362,7 @@ li.day a{
 	font-size: .7rem;
 	letter-spacing: 1px;
 	padding: 10px;
-}
-
-
-li.day :hover{
-	background: #808080;
-	color: white;
+	/*border: 2px solid black; */
 }
 
 
@@ -186,13 +388,13 @@ li.time{
 }
 
 li.name{
-	font-size:.6rem;
+	font-size: 1rem;
 	font-weight: 100;
 	margin-left: 0;
 }
 
 li.speaker-name{
-	font-size: .8rem;
+	font-size: 1rem;
 }
 
 
@@ -228,11 +430,17 @@ div.image-wrapper{
 
 div.speaker img{
 	border-radius: 50%; 
-	/*border: 2px solid black;*/
 	width: 200px;
 	height:200px;
-	margin: 10px 10px 0 10px; 
+	margin: 10px 10px 0 10px;
+	transition: .5s filter; 
+	filter: sepia();
 	/*border: 2px solid;*/
+}
+
+div.speaker img:hover, img:focus{
+	filter: none;
+	border: 4px solid white;
 }
 
 div.image-wrapper h2{
@@ -267,8 +475,10 @@ div.pricing{
 	display: flex;
 	justify-content: center;
 	padding: 20px; 
-	max-width: 900px; 
+	width: 80%;
+	max-width: 1000px; 
 	margin: auto;
+	/*border: 2px solid white;*/
 	/*border: 2px solid white;*/
 }
 
@@ -285,6 +495,7 @@ div.pricing div{
 	align-items: center; 
 	/*border-radius: 10px; */
 	transition: .3s;
+	/*border: 2px solid white;*/
 }
 
 
@@ -299,7 +510,6 @@ div.pricing div h2{
 	font-size: 1.2rem;
 	border-bottom: .2px solid;
 	/*border: 2px solid black;*/
-
 }
 
 
@@ -307,13 +517,14 @@ div.pricing div p{
 	text-align: center; 
 	margin: 10px;
 	font-size: .7rem;
+	/*border: 2px solid black;*/
 }
 
 
 p.feature{
 	/*border-bottom: 1px solid rgba(128,128,128,.3);*/
-	padding-bottom: 15px; 
-	/*border: 2px solid white;*/
+	padding-bottom: 10px; 
+	/*border: 2px solid black;*/
 }
 
 
@@ -332,7 +543,7 @@ button {
 	border: 0;
 	width: 100%; 
 	padding: 10px;
-	font-size: .8rem;
+	font-size: 1.2rem;
 	cursor: pointer; 
 	background: #808080;  
 	outline: none; 
@@ -340,14 +551,15 @@ button {
 }
 
 
-@media only all and (max-width: 800px){
+@media only all and (max-width: 900px){
 	div.pricing{
+		width: 70%;
 		flex-direction: column; 
 	}
 
 	button{
 		width: 100%;
-		font-size: 3vw; 
+		font-size: 1.2rem; 
 	}
 
 	p.price{
