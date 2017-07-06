@@ -75,16 +75,17 @@ ul.navbar li a{
 	/*border: 2px solid;*/
 }
 
-
+/*
 ul.navbar li a:hover{
 	background: white; 
 	color: black;
-}
+}*/
 
-ul.navbar li a:active{
+/*ul.navbar li a:active{
 	background: white; 
 	color: black;
 }
+*/
 
 
 @media only all and (max-width: 950px){
@@ -111,16 +112,19 @@ ul.navbar li a:active{
 
 @media only all and (max-width: 850px){
 	
+
 	nav.flex-nav{
-		display: flex;
-		flex-direction: column; 
+		display: flex; 
+		flex-direction: column;
 		align-items: center; 
 		padding: 10px 10px;
+		margin-top: 20px;
 	} 
 
 
 	ul.navbar{
-		margin-top: 20px; 
+		display: flex;
+		margin-top: 40px; 
 		justify-content: center; 
 		font-size: 2vw;
 	}
@@ -129,6 +133,8 @@ ul.navbar li a:active{
 
 
 @media only all and (max-width: 550px){
+
+
 
 	ul.navbar li a{
 	color: white; 
@@ -139,6 +145,7 @@ ul.navbar li a:active{
 	border-radius: 5px; 
 
   }
+
 
 }
 
@@ -247,14 +254,15 @@ div.conference-detail p{
 
 .schedule{
 	/*border: 2px solid; */
-	margin-top: 100px;
+	margin-top: 150px;
+	padding-top: 50px;
 }
 
-.schedule > *{
+/*.schedule > *{
 	margin: 0px;
-}
+}*/
 
-ul.agenda-nav{
+div.agenda-nav{
 	max-width: 500px;
 	display: flex;
 	justify-content: center; 
@@ -262,22 +270,25 @@ ul.agenda-nav{
 	list-style: none;
 	padding: 0 0 0 0;
 	position: relative;
+	border-radius: 5px; 
 	/*border: 2px solid;*/
 }
 
 
-li.day{
+div.agenda-nav a{
 	flex-grow: 1;
 	/*border: 2px dotted black;*/
 	display: flex;
 	justify-content: center; 
 	padding: 10px;
 	position: relative;
+	text-decoration: none; 
+	border-radius: 5px; 
 }
 
 
 
-li.day:hover::after{
+/*div.agenda-nav a:hover::after{
   content: ""; 
   position: absolute;
   border-top: 15px solid #808080; 
@@ -292,27 +303,27 @@ li.day:hover::after{
 }
 
 
-li.day::before:hover{
+div.agenda-nav a::before:hover{
 	border: 0.8em solid transparent;
 	position: absolute;
 	left: 45%;
 	bottom: -20px;
 	border-top: 10px solid #444;
-}
+}*/
 
 
-li.day:hover{
+/*div.agenda-nav:hover{
     background:#808080;
 }
 
 
-li.day:hover a{
+div.agenda-nav a:hover {
 	color: white;
 }
+*/
 
 
-
-li.day a{
+div.agenda-nav a{
 	color: #808080;
 	text-decoration: none; 
 	font-size: .7rem;
@@ -334,32 +345,38 @@ ul.session-container{
 	/*border: 2px dotted black;*/
 	flex-wrap: wrap;
 	padding-left: 0px;
+	border-radius: 5px; 
 }
 
 
 li.session{
 	/*border: 2px dotted black;*/
-	flex-grow: 1;  
+	flex-grow: 1;
+	/*border-radius: 5px;   */
 	/*border-bottom: .5px solid;*/
 }
 
 li.time{
 	font-size: 1rem;
 	text-align: left; 
+	margin-left: 20px;
 }
 
 li.name{
-	font-size: 1rem;
+	font-size: .8rem;
 	font-weight: 100;
 	padding: 0 10px;
 }
 
 li.speaker-name{
-	font-size: 1rem;
+	font-size: .8rem;
 	text-align: right; 
 	/*border: 2px solid;*/
 	padding-right: 10px;
+	margin-right: 10px;
 }
+
+
 
 
 
@@ -369,9 +386,6 @@ ul.session-container{
 	flex-direction: column; 
 }
 
-li.session li{
-	text-align: center; 
-}
 
 li.name{
 	text-align: center;
@@ -383,6 +397,22 @@ li.speaker-name{
 }
 
 }
+
+
+
+@media only all and (max-width: 500px){
+	
+
+	li.session {
+		font-size: 20px;
+	}
+
+	div.agenda-nav{
+		text-align: center;
+	}
+
+}
+
 
 
 
@@ -457,6 +487,20 @@ div.image-wrapper p{
 
 
 /*pricing component styling starts here*/
+
+
+.example-appear {
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity .4s ease-in;
+}
+
+
+
+
 
 
 div.pricing{
