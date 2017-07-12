@@ -177,7 +177,7 @@ div.inner-wrapper{
 /*about us page component styling begins*/
 div.home-content{
 	/*width: 100%; */
-	background-image: url(https://source.unsplash.com/XXzBM3spynk/); 
+	background-image: url("./christopher-harris-57366.jpg"); 
 	background-size: cover;
 	margin-top: 5px;
 	overflow: hidden;
