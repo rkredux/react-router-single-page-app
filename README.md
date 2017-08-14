@@ -4,6 +4,8 @@ The demo for this project is available on the link:
 
 https://rkredux.github.io/react-router-single-page-app/
 
+![screen shot 2017-08-13 at 9 11 32 pm](https://user-images.githubusercontent.com/19718006/29255174-b7cf413e-806c-11e7-94eb-a0f23254dd72.png)
+
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
